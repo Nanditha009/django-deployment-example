@@ -1,5 +1,5 @@
 """
-URL configuration for learning_templates project.
+URL configuration for Pro2 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.1/topics/http/urls/
@@ -14,13 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 from django.contrib import admin
 from django.urls import include, path
-from basic_app import views
+from appTwo import views
 
 urlpatterns = [
     path("", views.index, name="index"),
     path("admin/", admin.site.urls),
-    path("basic_app/", include("basic_app.urls")),
+    path("users/", include("appTwo.urls")),
 ]
